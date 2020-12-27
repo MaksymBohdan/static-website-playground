@@ -1,21 +1,25 @@
 @import './normalize.css';
 
 body {
-  /* padding: 50px; */
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00b7ff;
-}
-
-.container {
-  width: 1100px;
-  margin: 0 auto;
-  background-color: #00b7ff;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header {
+  padding: 24px 0;
+  background-color: blueviolet;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.nav-list {
   display: flex;
-  justify-content: space-around;
 }
