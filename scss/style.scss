@@ -1,0 +1,25 @@
+@import '_normalize.scss';
+
+body {
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  padding: 24px 0;
+  background-color: rebeccapurple;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.nav-list {
+  display: flex;
+}
