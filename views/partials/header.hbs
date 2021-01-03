@@ -1,0 +1,33 @@
+   <header class="header">
+      <nav class="navigation container">
+        <a href="/">
+          <img src="/images/logo.png" alt="oue restaurant logo" class="logo" height="40" width="210">
+        </a>
+
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="/" class="navigation__link {{#if isHome}}navigation__link_active{{/if}}">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="/menu" class="navigation__link {{#if isMenu}}navigation__link_active{{/if}}">Menu</a>
+          </li>
+          <li class="navigation__item">
+            <a href="/reservation" class="navigation__link {{#if isReservation}}navigation__link_active{{/if}}">Reservation</a>
+          </li>
+          <li class="navigation__item">
+            <a href="/recipe" class="navigation__link {{#if isRecipe}}navigation__link_active{{/if}}">Recipe</a>
+          </li>
+          <li class="navigation__item">
+            <a href="/blog" class="navigation__link {{#if isBlog}}navigation__link_active{{/if}}">Blog</a>
+          </li>
+          <li class="navigation__item">
+            <a href="/pages" class="navigation__link {{#if isPages}}navigation__link_active{{/if}}">Pages</a>
+          </li>
+          <li class="navigation__item">
+            <a href="/contact" class="navigation__link {{#if isContact}}navigation__link_active{{/if}}">Contact</a>
+          </li>
+        </ul>
+        
+          <button class="navigation__button">Book your table</button>
+      </nav>
+    </header>

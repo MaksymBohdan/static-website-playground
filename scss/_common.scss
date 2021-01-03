@@ -1,0 +1,20 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: $text-size-content;
+  font-family: 'Sintony-Regular', sans-serif;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

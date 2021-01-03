@@ -6,9 +6,9 @@ var logger = require('morgan');
 var livereload = require('livereload');
 var connectLiveReload = require('connect-livereload');
 var sassMiddleware = require('node-sass-middleware');
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var router = require('./routes/index');
+var hbs = require('hbs');
+var helpers = require('./helpers');
 
 // live reload setup
 var liveReloadServer = livereload.createServer();
@@ -24,6 +24,8 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+hbs.registerPartials(__dirname + '/views/partials', function (err) {});
+hbs.registerHelper('isEqual', helpers.isEqual);
 
 app.use(connectLiveReload());
 app.use(logger('dev'));
@@ -38,19 +40,15 @@ app.use(
     indentedSyntax: false, // true = .sass and false = .scss
     outputStyle: 'compressed',
   }),
-  express.static(path.join(__dirname, 'public'))
 );
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
-console.log('ssssss');
+// router
+app.use('/', router);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
-
 // error handler
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
@@ -61,5 +59,7 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+console.log('server is running');
 
 module.exports = app;

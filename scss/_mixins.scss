@@ -1,0 +1,19 @@
+@mixin banner-style($size, $weight: 700, $color: $text-color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  font-family: 'Playfair-Display-Bold', serif;
+}
+
+@mixin focus-style($colorValue: $background-color-dark, $alphaParam: 0.2) {
+  &:focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 4px rgba($colorValue, $alphaParam);
+  }
+}
+
+@mixin active-style($colorValue: $background-color-white, $alphaParam: 0.9) {
+  &:active {
+    background-color: rgba($colorValue, $alphaParam);
+  }
+}

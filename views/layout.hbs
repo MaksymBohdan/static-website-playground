@@ -4,7 +4,15 @@
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-    {{{body}}}
+  <body> 
+      {{> header}}
+
+    <main class="main">
+      <div class="container">
+        {{{body}}}
+      </div>
+    </main>
+
+      {{> footer}}
   </body>
 </html>

@@ -1,0 +1,57 @@
+.header {
+  padding: 24px 0;
+  flex: 0 0 auto;
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+      width: 530px;
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      color: $text-color-menu;
+      font-weight: $font-normal;
+    }
+
+    &__link {
+      color: $text-color-menu;
+
+      &_active {
+        color: $text-color-orange;
+        border-bottom: 1px solid $text-color-orange;
+      }
+
+      &:active {
+        color: $text-color-orange;
+      }
+    }
+
+    &__button {
+      @extend %button-default;
+
+      background-color: $background-color-button;
+      color: $text-color-white;
+      padding: 15px 15px 15px 52px;
+      max-width: 200px;
+      font-weight: $font-normal;
+      position: relative;
+
+      &::before {
+        content: '';
+        background: no-repeat no-repeat url('/images/order.png');
+        width: 21px;
+        height: 17px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 18px;
+      }
+
+      @include focus-style($background-color-button);
+      @include active-style($background-color-button);
+    }
+  }
+}
