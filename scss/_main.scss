@@ -4,3 +4,48 @@
   font-family: 'Sintony-Regular', sans-serif;
   font-weight: 400;
 }
+
+.banner {
+  background-image: url('/images/banner-sm@1x.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 570px;
+  position: relative;
+
+  @include banner-bg-sm-2x(url('/images/banner-sm@2x.png'));
+  @include banner-bg-lg-1x(url('/images/banner-lg@1x.png'));
+  @include banner-bg-lg-2x(url('/images/banner-lg@2x.png'));
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & > p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    font-size: $text-size-banner-title;
+    line-height: 55px;
+    color: $text-color-white;
+    font-family: 'Playfair-Display-Regular', serif;
+    font-weight: $font-normal;
+  }
+
+  &__text {
+    font-size: $text-size-banner-text;
+    line-height: normal;
+    color: $text-color-white;
+    font-family: 'Playfair-Display-Regular', serif;
+    font-weight: $font-normal;
+
+    & > span {
+      color: $text-color-orange;
+    }
+  }
+}

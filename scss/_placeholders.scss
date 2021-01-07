@@ -1,12 +1,14 @@
 %text-content {
   font-family: 'Sintony-Regular';
   font-size: $text-size-content;
+  line-height: $text-size-content * 1.2;
   color: $text-color-content;
 }
 
 %text-title {
   font-family: 'Sintony-Bold';
   font-size: $text-size-title;
+  line-height: $text-size-title * 1.2;
   color: $text-color-title;
 }
 

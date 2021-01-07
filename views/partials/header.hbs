@@ -1,7 +1,12 @@
    <header class="header">
       <nav class="navigation container">
         <a href="/" class="navigation__logo">
-          <img src="/images/logo.png" alt="oue restaurant logo" class="logo" height="40" width="210">
+          <picture class="section01-wrap__photo">              
+           {{!-- <source media="(max-width: 479px)" srcset="/images/logo-479@1x.png 1x, /images/logo-479@2x.png 2x"> --}}
+            <img  
+            srcset="/images/logo@1x.png 1x, /images/logo@2x.png 2x"
+            alt="our restaurant logo" class="logo" height="40" width="210">
+          </picture >              
         </a>
 
         <ul class="navigation__list">

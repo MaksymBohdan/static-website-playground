@@ -1,6 +1,6 @@
 .header {
   flex: 0 0 auto;
-  padding-bottom: 10px;
+  padding: 10px 0;
 
   .navigation {
     display: flex;
@@ -46,7 +46,8 @@
       }
 
       &:active,
-      &:hover {
+      &:hover,
+      &:focus {
         color: $text-color-orange;
       }
     }

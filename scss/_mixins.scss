@@ -17,3 +17,34 @@
     background-color: rgba($colorValue, $alphaParam);
   }
 }
+
+@mixin banner-bg-lg-2x($background) {
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: $screen-lg-min),
+    (min-resolution: 2dppx) and (min-width: $screen-lg-min) {
+    background-image: $background;
+  }
+}
+
+@mixin banner-bg-lg-1x($background) {
+  @media only screen and (min-width: $screen-lg-min) {
+    &__content {
+      left: 170px;
+      transform: translate(0, -50%);
+    }
+
+    background-image: $background;
+  }
+}
+
+@mixin banner-bg-sm-2x($background) {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    background-image: $background;
+  }
+
+  // @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+  //   background-image: url('/images/banner@3x.png');
+  // }
+  // @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  //   background-image: url('/images/banner@2x.png');
+  // }
+}
